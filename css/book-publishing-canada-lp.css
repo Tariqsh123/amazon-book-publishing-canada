@@ -1705,6 +1705,7 @@ footer.footer .payment-icon p {
   section.who-we-are .m-t-30.d-flex {
     justify-content: center;
     margin-bottom: 48px;
+    gap: 20px;
   }
   section.why-choose p {
     margin: auto;
