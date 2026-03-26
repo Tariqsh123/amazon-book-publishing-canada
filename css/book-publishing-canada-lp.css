@@ -1470,8 +1470,8 @@ section.about-reviews {
 }
 section.about-reviews .box {
   text-align: center;
-  height: 450px;
-  width: 330px;
+  height: 400px;
+  width: 280px;
   background: #fa9a0a13; 
   padding-top: 30px; 
   border: 2px solid #f5b400;
@@ -1479,13 +1479,15 @@ section.about-reviews .box {
 }
 section.about-reviews .box .h3 {
   margin-top: 15px;
+  font-size: large !important;
 }
 section.about-reviews .box .h4 {
-  font-size: large !important;
+  font-size: medium !important;
 }
 section.about-reviews .box p {
   margin: 20px auto;
   width: auto;
+  font-size: small !important;
 }
 section.how-its-work .m-t-40 {
   text-align: center;
@@ -1493,22 +1495,83 @@ section.how-its-work .m-t-40 {
 section.how-its-work p.m-t-10 {
   font-size: 20px !important;
 }
+.how-box-container{
+  height: fit-content;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+}
+
 section.how-its-work .how-box {
   position: relative;
   text-align: center;
+  height: 280px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  width: 200px;
+  background: linear-gradient(white,#fa9a0a42);
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
+section.how-its-work .how-box img{
+  height: 80px;
+  width: auto;
+  object-fit: contain;
+}
+section.how-its-work .how-box .h4 {
+  font-size: medium !important;
+}
+
 section.how-its-work .how-box p {
   margin: 10px auto 0;
-  width: 260px;
+  height: 100px;
+  width: auto;
+  font-size: x-small !important;
 }
 section.how-its-work .how-box.box1:after {
-  background-image: url(../images/lines.webp);
-  content: "";
-  height: 1px;
-  left: 78%;
-  position: absolute;
-  top: 33%;
-  width: 182px;
+    background-image: url(../images/lines.webp);
+    content: "";
+    height: 1px;
+    left: 70% !important;
+    position: absolute;
+    z-index: 1;
+    top: 25%;
+    width: 141px;
+}
+
+@media(max-width:991px){
+ .how-box-container{
+  display: flex;
+  overflow-x: auto;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+}
+section.how-its-work .how-box {
+    height: fit-content;
+    padding: 20px;
+    width: 320px;
+  }
+  section.how-its-work .how-box img {
+    height: 120px;
+    width: auto;
+    object-fit: contain;
+}
+  section.how-its-work .how-box .h4 {
+    font-size: x-large !important;
+    height: auto;
+}
+section.how-its-work .how-box p {
+    height: auto;
+    width: auto;
+    font-size: medium !important;
+} 
 }
 section.who-we-are.top {
   background-image: url(../images/bg-top.webp);
@@ -1780,7 +1843,7 @@ footer.footer .payment-icon p {
   .who-we-are h2,
   .why-choose .h2,
   .why-choose h2 {
-    font-size: 28px !important;
+    font-size: 40px !important;
   }
 }
 
