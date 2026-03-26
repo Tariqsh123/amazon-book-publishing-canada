@@ -1426,17 +1426,36 @@ section.main-banner .form-details .submit button {
 section.why-choose .col-lg-9 p {
   font-size: 20px !important;
 }
+section.why-choose .row{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
 section.why-choose .box {
   margin-top: 20px;
+  background: linear-gradient(#f5b400,#fa9a0a);
+  height: 400px;
+  border-radius: 20px;
+  width: 350px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
 }
 section.why-choose .box img {
   display: block;
   margin: auto;
+
 }
 section.why-choose .box .h3 {
-  margin-bottom: 16px;
-  margin-top: 16px;
+  /* margin-bottom: 16px;
+  margin-top: 16px; */
+  margin: 0;
+  color: white !important;
 }
 section.about-reviews {
   background-image: url(../images/bg.webp);
@@ -1446,13 +1465,22 @@ section.about-reviews {
 }
 section.about-reviews .box {
   text-align: center;
+  height: 450px;
+  width: 330px;
+  background: #fa9a0a13; 
+  padding-top: 30px; 
+  border: 2px solid #f5b400;
+  border-radius: 20px;
 }
 section.about-reviews .box .h3 {
   margin-top: 15px;
 }
+section.about-reviews .box .h4 {
+  font-size: large !important;
+}
 section.about-reviews .box p {
   margin: 20px auto;
-  width: 320px;
+  width: auto;
 }
 section.how-its-work .m-t-40 {
   text-align: center;
@@ -1481,6 +1509,7 @@ section.who-we-are.top {
   background-image: url(../images/bg-top.webp);
   background-size: 100% 100%;
 }
+
 section.who-we-are {
   background-image: url(../images/bg.webp);
   background-repeat: no-repeat;
@@ -1537,7 +1566,7 @@ section.who-we-are .bracket h3 {
   text-align: center;
 }
 section.who-we-are p {
-  padding-left: 30px;
+  padding-left: 0px;
 }
 section.who-we-are .btn-live {
   background: transparent;
@@ -1749,11 +1778,18 @@ footer.footer .payment-icon p {
   }
 }
 
-#email,#phone_no{
+#email, #phone_no {
     margin-bottom: 10px;
     width: 100%;
+    border: 1px solid gainsboro;
+    padding-left: 10px;
+    border-radius: 5px;
+    outline: none;
 }
 
+#email:focus, #phone_no:focus {
+    border: 2px solid #fa9a0a;
+}
 .btn-live{
     margin: 0 !important;
 }
@@ -1868,4 +1904,95 @@ footer.footer .payment-icon p {
     .popup-right {
         width: 100%;
     }
+}
+
+.faq-section {
+    padding: 60px 20px;
+    background: #f9f9f9;
+}
+
+.faq-container {
+    max-width: 900px;
+    margin: auto;
+}
+
+.faq-heading {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 40px;
+}
+
+.faq-item {
+    margin-bottom: 15px;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+.faq-question {
+    background: linear-gradient(#f5b400,#fa9a0a);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    font-weight: 600;
+    font-size: large;
+    width: 100%;
+    border: none;
+    padding: 15px 20px;
+}
+
+.faq-icon::before {
+    content: "+";
+    font-size: 20px;
+}
+
+.faq-item.active .faq-icon::before {
+    content: "−";
+}
+
+/* Smooth animation */
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.4s ease;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 500px;
+    padding: 20px;
+}
+.faq-item.active .faq-icon {
+    content: "-";
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .faq-heading {
+        font-size: 26px;
+    }
+    .faq-question {
+        font-size: 16px;
+    }
+}
+
+@media(max-width:600px){
+section.who-we-are.top {
+  padding-top: 0;
+  padding-bottom: 60px;
+}
+section.who-we-are .h5{
+  padding: 0;
+  text-align: center;
+}
+.why-choose,.how-its-work,.who-we-are,section.who-we-are{
+  padding-top: 0;
+}
+section.who-we-are p{
+  margin-bottom: 20px;
+}
+section.about-reviews{
+  padding-top: 0;
+  padding-bottom: 60px;
+}
 }
