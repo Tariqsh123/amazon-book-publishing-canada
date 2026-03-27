@@ -17,34 +17,34 @@
     <link rel="canonical" href="">
 
     <!-- Standard favicon -->
-<link rel="icon" href="images/logo.webp" type="image/x-icon">
+<link rel="icon" href="images/favicon.ico" type="image/x-icon">
 
 <!-- PNG favicons -->
-<link rel="icon" type="image/png" sizes="16x16" href="images/logo.webp">
-<link rel="icon" type="image/png" sizes="32x32" href="images/logo.webp">
-<link rel="icon" type="image/png" sizes="48x48" href="images/logo.webp">
-<link rel="icon" type="image/png" sizes="64x64" href="images/logo.webp">
+<link rel="icon" type="image/png" sizes="16x16" href="images/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon.ico">
+<link rel="icon" type="image/png" sizes="48x48" href="images/favicon.ico">
+<link rel="icon" type="image/png" sizes="64x64" href="images/favicon.ico">
 
 <!-- Apple Touch Icons -->
-<link rel="apple-touch-icon" sizes="57x57" href="images/logo.webp">
-<link rel="apple-touch-icon" sizes="60x60" href="images/logo.webp">
-<link rel="apple-touch-icon" sizes="72x72" href="images/logo.webp">
-<link rel="apple-touch-icon" sizes="76x76" href="images/logo.webp">
-<link rel="apple-touch-icon" sizes="114x114" href="images/logo.webp">
-<link rel="apple-touch-icon" sizes="120x120" href="images/logo.webp">
-<link rel="apple-touch-icon" sizes="144x144" href="images/logo.webp">
-<link rel="apple-touch-icon" sizes="152x152" href="images/logo.webp">
-<link rel="apple-touch-icon" sizes="180x180" href="images/logo.webp">
+<link rel="apple-touch-icon" sizes="57x57" href="images/favicon.ico">
+<link rel="apple-touch-icon" sizes="60x60" href="images/favicon.ico">
+<link rel="apple-touch-icon" sizes="72x72" href="images/favicon.ico">
+<link rel="apple-touch-icon" sizes="76x76" href="images/favicon.ico">
+<link rel="apple-touch-icon" sizes="114x114" href="images/favicon.ico">
+<link rel="apple-touch-icon" sizes="120x120" href="images/favicon.ico">
+<link rel="apple-touch-icon" sizes="144x144" href="images/favicon.ico">
+<link rel="apple-touch-icon" sizes="152x152" href="images/favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="images/favicon.ico">
 
 <!-- Android / Chrome icons -->
-<link rel="icon" type="image/png" sizes="192x192" href="images/logo.webp">
+<link rel="icon" type="image/png" sizes="192x192" href="images/favicon.ico">
 
 <!-- Microsoft Tiles (Windows) -->
 <meta name="msapplication-TileColor" content="#ffffff">
-<meta name="msapplication-TileImage" content="images/logo.webp">
+<meta name="msapplication-TileImage" content="images/favicon.ico">
 
 <!-- Safari pinned tab -->
-<link rel="mask-icon" href="images/logo.webp" color="#5bbad5">
+<link rel="mask-icon" href="images/favicon.ico" color="#5bbad5">
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
 
@@ -140,37 +140,86 @@
                     <p>Every launch stays transparent, practical, and yours. </p>
                     <button class="btn-order open_popup" onclick="openPopup()">Get Free Consultation</button>
                     <button class="btn-live m-l-20" type="button" onclick="openPopup()">Publish on Amazon with Us</button>
-                    <div class="m-t-20 row gy-4 gx-3 align-items-center">
-                        <div class="col-6 col-sm-4 col-md-2">
-                            <img src="images/amazon-service-provider.webp" class="img-fluid d-block mx-auto"
-                                alt="" title="" loading="lazy" width="101"
-                                height="101">
-                        </div>
-                        <div class="col-6 col-sm-4 col-md-2">
-                            <img src="images/markerting-agency.webp" class="img-fluid d-block mx-auto"
-                                alt="" title="" loading="lazy" width="101"
-                                height="101">
-                        </div>
-                        <div class="col-6 col-sm-4 col-md-2">
-                            <img src="images/mud.webp" class="img-fluid d-block mx-auto" alt="MUD" title="MUD"
-                                loading="lazy" width="101" height="101">
-                        </div>
-                        <div class="col-6 col-sm-4 col-md-2">
-                            <img src="images/top-amazon-marketing-agencies.webp" class="img-fluid d-block mx-auto"
-                                alt="Top Amazon Marketing Agencies" title="Top Amazon Marketing Agencies" loading="lazy"
-                                width="101" height="101">
-                        </div>
-                        <div class="col-6 col-sm-4 col-md-2">
-                            <img src="images/top-amazon-ppc-agencies.webp" class="img-fluid d-block mx-auto"
-                                alt="Top Amazon PPC Agencies" title="Top Amazon PPC Agencies" loading="lazy" width="101"
-                                height="101">
-                        </div>
-                        <div class="col-6 col-sm-4 col-md-2">
-                            <img src="images/verified-partner-badge.webp" class="img-fluid d-block mx-auto"
-                                alt="Verified Partner Badge" title="Verified Partner Badge" loading="lazy" width="101"
-                                height="101">
-                        </div>
-                    </div>
+                    <style>
+.marquee-wrapper {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.marquee-track {
+    display: flex;
+    width: max-content;
+    animation: scroll 15s linear infinite;
+}
+
+.marquee-track .col-6 {
+    flex: 0 0 auto;
+    width: auto; /* important fix */
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+</style>
+
+<div class="marquee-wrapper">
+    <div class="marquee-track m-t-20 row gy-4 gx-3 align-items-center flex-nowrap">
+
+        <!-- original -->
+        <div class="col-6 col-sm-4 col-md-2">
+            <img src="images/amazon.webp" class="img-fluid d-block mx-auto"
+                alt="amazon" title="amazon" loading="lazy" width="101" height="101">
+        </div>
+
+        <div class="col-6 col-sm-4 col-md-2">
+            <img src="images/barnes-and-noble.webp" class="img-fluid d-block mx-auto"
+                alt="barnes-and-noble" title="barnes-and-noble" loading="lazy" width="101" height="101">
+        </div>
+
+        <div class="col-6 col-sm-4 col-md-2">
+            <img src="images/google-books.webp" class="img-fluid d-block mx-auto"
+                alt="google-books" title="google-books" loading="lazy" width="101" height="101">
+        </div>
+
+        <div class="col-6 col-sm-4 col-md-2">
+            <img src="images/smash-words.webp" class="img-fluid d-block mx-auto"
+                alt="smash-words" title="smash-words" loading="lazy" width="101" height="101">
+        </div>
+
+        <div class="col-6 col-sm-4 col-md-2">
+            <img src="images/draft-and-digital.webp" class="img-fluid d-block mx-auto"
+                alt="draft-and-digital" title="draft-and-digital" loading="lazy" width="101" height="101">
+        </div>
+
+        <!-- duplicate for infinite scroll -->
+        <div class="col-6 col-sm-4 col-md-2">
+            <img src="images/amazon.webp" class="img-fluid d-block mx-auto" width="101" height="101">
+        </div>
+
+        <div class="col-6 col-sm-4 col-md-2">
+            <img src="images/barnes-and-noble.webp" class="img-fluid d-block mx-auto" width="101" height="101">
+        </div>
+
+        <div class="col-6 col-sm-4 col-md-2">
+            <img src="images/google-books.webp" class="img-fluid d-block mx-auto" width="101" height="101">
+        </div>
+
+        <div class="col-6 col-sm-4 col-md-2">
+            <img src="images/smash-words.webp" class="img-fluid d-block mx-auto" width="101" height="101">
+        </div>
+
+        <div class="col-6 col-sm-4 col-md-2">
+            <img src="images/draft-and-digital.webp" class="img-fluid d-block mx-auto" width="101" height="101">
+        </div>
+
+    </div>
+</div>
                 </div>
                 <div class="col-12 col-lg-5 offset-lg-1">
                     <div class="form-details" id="lp_quote_form">
@@ -511,28 +560,33 @@
     </section>
 
     <section class="get-started">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 col-lg-10 mx-auto text-center">
-                    <h2 class="h2">Be it Fiction, Horror or Romance – <span style="color: #fa9a0a;"> we publish every genre</span></h2>
-                    <p>Bring your book to us, irrespective of the genre, and we’ll help you launch it, at your desired
-                        platform. Some of our commonly published genres are Romance, Horror, Fiction, Non-Fiction and
-                        more.</p>
-                    <img src="images/book-covers.webp" class="img-fluid m-t-30 mx-auto" alt="Book Covers"
-                        title="Book Covers" loading="lazy" width="540" height="396">
-                    <div class="m-t-40 text-center">
-                        <button class="btn-order open_popup" onclick="openPopup()">Publish My Book</button>
-                    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-lg-10 mx-auto text-center">
+                <h2 class="h2">Be it Fiction, Horror or Romance – <span style="color: #fa9a0a;"> we publish every genre</span></h2>
+                <p>Bring your book to us, irrespective of the genre, and we’ll help you launch it, at your desired
+                    platform. Some of our commonly published genres are Romance, Horror, Fiction, Non-Fiction and
+                    more.</p>
+
+                <!-- Video Added -->
+                <video class="img-fluid m-t-30 mx-auto" width="540" height="396" autoplay loop muted playsinline>
+                    <source src="book.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+
+                <div class="m-t-40 text-center">
+                    <button class="btn-order open_popup" onclick="openPopup()">Publish My Book</button>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <section class="google-brand">
         <div class="container">
             <div class="row text-center">
                 <div class="col-12 col-lg-9 mx-auto ">
-                    <h2 class="h2">Join Your <span style="color: #fa9a0a;"> Australian Neighbours </span> Who Trusted Us to Publish Their Books </h2>
+                    <h2 class="h2">Join Your <span style="color: #fa9a0a;"> Australian Neighbours </span> Who Trusted Us To Publish Their Books </h2>
                     <p>Ready to publish books online on Amazon with the experts? Self Publishing Australia has helped 250+ authors across Sydney, Melbourne, Brisbane, Perth, and Adelaide bring over 30,000+ books to readers worldwide.</p>
                     <p>Our Amazon KDP publishing services in Australia cover everything from professional book formatting to Amazon book distribution, ensuring your book reaches global marketplaces with ease. You keep 100% royalties while we handle the technical side. With quick Amazon publishing and a 7-day guarantee, there is no faster or more reliable way to launch.</p>
                     <p>Trust our Kindle Direct Publishing experts who genuinely care about your success. Start your journey today, your readers are waiting.</p>
@@ -739,7 +793,7 @@ document.querySelectorAll('.faq-question').forEach(btn => {
     <!-- Column 2 -->
     <div class="new-footer-col">
       <h3 class="new-footer-heading">Contact</h3>
-      <p class="new-footer-text"><strong>Call Us :</strong> +42 333 444 555</p>
+      <p class="new-footer-text"><strong>Call Us :</strong> <a href="tel:+42333444555" style="color: #cfcfcf;"> +42 333 444 555</a></p>
       <p class="new-footer-text"><strong>Address :</strong> 245 Collins St, Melbourne VIC 3000, Australia</p>
     </div>
 
@@ -780,7 +834,6 @@ function openPopup() {
             <button class="popup-close" onclick="closePopup()">×</button>
 
             <div class="popup-left">
-                <img class="popup-logo" src="images/logo.webp" alt="Logo">
                 </div>
 
             <div class="popup-right">
@@ -800,6 +853,7 @@ function openPopup() {
                     <textarea class="popup-textarea" placeholder="Tell us about your Project"></textarea>
                     <button type="submit" class="popup-btn">Submit</button>
                 </form>
+                <a href="mailto:info@bookpublishingaustralia.com" style="color:black;margin-top:20px">info@bookpublishingaustralia.com</a>
             </div>
 
         </div>
