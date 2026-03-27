@@ -2204,7 +2204,7 @@ section.about-reviews{
 
 .new-footer-bottom-text {
   font-size: 13px;
-  color: #888;
+  color: #fff;
   line-height: 1.6;
 }
 
@@ -2232,7 +2232,7 @@ section.about-reviews{
   }
 
   .new-footer-logo {
-    width: 190px;
+    width: 95%;
   }
 
   .new-footer-payment {
