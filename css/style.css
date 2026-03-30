@@ -2368,7 +2368,7 @@ section.about-reviews{
   flex-direction: column;
   background: linear-gradient(to right , #f5b400,#fa9a0a);
   padding: 60px 10px;
-  padding-top: 250px;
+  padding-top: 150px;
   gap: 20px;
 }
 .package-page-main-container h1{
@@ -2465,7 +2465,7 @@ section.about-reviews{
   height: fit-content;
   width: 100%;
   padding: 0px;
-  padding-top: 165px;
+  padding-top: 110px;
 }
 .all-packages-header-section {
   width: 100%;
@@ -2516,12 +2516,13 @@ section.about-reviews{
   height: 300px;
   object-fit: contain;
 }
-
+@media(max-width:991px){
+  .all-package-main {
+    padding-top: 80px;
+}
+}
 /* 📱 Responsive */
 @media (max-width: 768px) {
-  .all-package-main{
-  padding-top: 120px;
-}
   .all-packages-header-container {
     flex-direction: column;
     text-align: center;
@@ -2819,3 +2820,137 @@ section.about-reviews{
     font-size: 18px;
   }
 }
+
+
+#new-nav-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #222e3e;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    z-index: 999;
+    font-family: Arial, sans-serif;
+    transition: box-shadow 0.3s;
+  }
+
+  #new-nav-container.scrolled {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  }
+
+  /* ---------------- Logo ---------------- */
+  #new-nav-logo img {
+    height: 80px;
+    cursor: pointer;
+    transition: transform 0.3s;
+  }
+
+  #new-nav-logo img:hover {
+    transform: scale(1.1);
+  }
+
+  /* ---------------- Nav Menu ---------------- */
+  #new-nav-menu {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+  }
+
+  #new-nav-menu li {
+    display: flex;
+    align-items: center;
+    margin: 0;
+  }
+
+  #new-nav-menu li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    padding: 0.5rem 0;
+    transition: color 0.3s;
+  }
+
+  #new-nav-menu li a:hover {
+    color: #ffb703;
+  }
+
+  /* ---------------- Button ---------------- */
+  #new-nav-button {
+    background-color: #ffb703;
+    color: #222e3e;
+    border: none;
+    padding: 0.6rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: background 0.3s;
+  }
+
+  #new-nav-button:hover {
+    background-color: #e6a300;
+  }
+
+  /* ---------------- Hamburger ---------------- */
+  #new-nav-hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+  }
+
+  #new-nav-hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    transition: all 0.3s;
+  }
+
+  /* ---------------- Responsive ---------------- */
+  @media (max-width: 992px) {
+    #new-nav-menu {
+      position: fixed;
+      top: 70px;
+      left: -100%;
+      flex-direction: column;
+      background-color: #222e3e;
+      width: 100%;
+      padding: 2rem 0;
+      gap: 1rem;
+      text-align: center;
+      transition: left 0.3s ease;
+    }
+
+    #new-nav-menu.active {
+      left: 0;
+    }
+
+    #new-nav-hamburger {
+      display: flex;
+    }
+
+    #new-nav-button {
+      display: none;
+    }
+
+    #new-nav-logo img {
+      height: 50px;
+    }
+
+    #new-nav-menu li, #new-nav-menu li a {
+      height: auto;
+    }
+  }
+
+  /* Hamburger animation */
+  .rotate1 { transform: rotate(45deg) translate(5px, 5px); }
+  .rotate2 { transform: rotate(-45deg) translate(5px, -5px); }
+  .fade { opacity: 0; }
