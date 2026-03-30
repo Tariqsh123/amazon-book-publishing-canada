@@ -2872,7 +2872,7 @@ section.about-reviews{
   #new-nav-menu li a {
     color: #fff;
     text-decoration: none;
-    font-weight: 500;
+    /* font-weight: 500; */
     font-size: 1rem;
     padding: 0.5rem 0;
     transition: color 0.3s;
